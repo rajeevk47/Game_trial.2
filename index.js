@@ -15,7 +15,7 @@ for (let i = 0; i < collisions.length; i += 160) {  //converting 1D array to 2D
     collisionsMap.push(collisions.slice(i,160+i)) 
 }
 
-const offset = {x: -810,y : -900}//Offset to the map
+const offset = {x: -815,y : -900}//Offset to the map
 
 const boundaries = []
 collisionsMap.forEach((row, i) => {
@@ -135,7 +135,6 @@ function animate() {
                  }
                )
             ){
-                console.log('collide')
                 moving =false
                 break
             }
@@ -152,12 +151,11 @@ function animate() {
             const boundary = boundaries[i]
             if(rectangularcollision({
                 rectangle1: player,
-                rectangle2: {...boundary, position:{x:boundary.position.x+5 ,y:boundary.position.y}
+                rectangle2: {...boundary, position:{x:boundary.position.x+5,y:boundary.position.y}
                    }
                  }
                )
             ){
-                console.log('collide')
                 moving =false
                 break
             }
@@ -179,7 +177,6 @@ function animate() {
                  }
                )
             ){
-                console.log('collide')
                 moving =false
                 break
             }
